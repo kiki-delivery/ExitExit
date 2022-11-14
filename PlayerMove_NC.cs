@@ -65,7 +65,7 @@ public class PlayerMove_NC : MonoBehaviour
         {
             louder.Play();
         }
-        if (transform.Find("R1") && transform.Find("R2")) // 블럭안에 있는 빈 오브젝트들, 까먹었으면 나를 불러서 다시 설명 듣기
+        if (transform.Find("R1") && transform.Find("R2")) // 블럭안에 있는 빈 오브젝트들
         {
             Where(trans); // 어느 방향으로 움직여야 하는지 구함
         }
@@ -178,8 +178,8 @@ public class PlayerMove_NC : MonoBehaviour
             {
                 yaho = plus;
             }
-            Debug.Log("x가 제일 멀어요");
-            Debug.Log("R1  " + R1.x + "R2   " + R2.x);
+            //Debug.Log("x가 제일 멀어요");
+            //Debug.Log("R1  " + R1.x + "R2   " + R2.x);
         }
         else
         {
@@ -192,8 +192,8 @@ public class PlayerMove_NC : MonoBehaviour
             {
                 yaho = plus;
             }
-            Debug.Log("y가 제일 멀어요");
-            Debug.Log("R1  " + R1.y + "R2   " + R2.y);
+            //Debug.Log("y가 제일 멀어요");
+            //Debug.Log("R1  " + R1.y + "R2   " + R2.y);
         }
     }
 
@@ -225,7 +225,7 @@ public class PlayerMove_NC : MonoBehaviour
 
     }
 
-    float[] MoveRange(string block) // 자동으로 움직일 범위 지정, 궁금하면 부르세요, 여유 될 때 코드 줄이는 방법 생각하기
+    float[] MoveRange(string block) // 자동으로 움직일 범위 지정, 여유 될 때 코드 줄이는 방법 생각하기
     {
         GameObject badak;
         float scale;
@@ -257,7 +257,7 @@ public class PlayerMove_NC : MonoBehaviour
         return range;
     }
 
-    private void AutoMove(string block, float[] range) // 여유 될 때 코드 줄이는 방법 생각하기, 여기도 궁금하면 부르세요, 버그있음
+    private void AutoMove(string block, float[] range) // 여유 될 때 코드 줄이는 방법 생각하기
     {
         GameObject CollisionObject;
         if (block.Contains("Garo"))
